@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameSettings">
+
+
+    <TextView
+        android:id="@+id/pagetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="#F4F8F8"
+        android:text="@string/game_settings"
+        android:textColor="#0A0000"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/num_letter_pool_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="488dp"
+        android:background="#C4689F38"
+        android:text="@string/change_letter_counts"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textColorLink="#4CAF50"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/letter_points_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="428dp"
+        android:background="#C4689F38"
+        android:text="@string/change_letter_points"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/max_game_cycles_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="368dp"
+        android:background="#C4689F38"
+        android:text="@string/max_game_turns"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/return_menu_button"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="0dp"
+        android:background="#E1D32F2F"
+        android:text="@string/return_main_menu"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/letter_counts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="243dp"
+        android:background="#36F3F3DE"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/check_letter_counts"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="0dp"
+            android:gravity="center"
+            android:text="@string/letter_counts_in_pool"
+            android:textColor="#388E3C"
+            android:textColorHighlight="#E64A19"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="249dp"
+            android:layout_marginStart="2dp"
+            tools:visibility="invisible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/A"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/a"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/A_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/B"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="B:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/B_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/C"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="C:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/C_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/D"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="D:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/D_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/E"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="E:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/E_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/F"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="F:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/F_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/G"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="G:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/G_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/H"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="H:"
+                    android:textColor="#FD050505"
+                    android:textIsSelectable="false"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/H_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/I"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="I:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/I_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="9"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/J"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="J:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/J_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/K"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="K:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/K_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/L"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="L:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/L_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/M"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="M:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/M_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/N"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="N:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/N_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/O"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="O:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/O_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="8"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/P"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="P:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/P_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/Q"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Q:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Q_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/blank_1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/blank_2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/R"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="R:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/R_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/S"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="S:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/S_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/T"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="T:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+
+                <EditText
+                    android:id="@+id/T_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/U"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="U:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/U_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/V"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="V:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/V_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/W"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="W:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/W_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/blank_3"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/blank_4"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/X"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="X:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/X_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/Y"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Y:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Y_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+                <TextView
+                    android:id="@+id/Z"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Z:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Z_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/blank"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="/"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/blank_NO"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/letter_points_layout"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="243dp"
+        android:background="#36F3F3DE"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/check_letter_points"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="0dp"
+            android:gravity="center"
+            android:text="@string/letter_points_in_pool"
+            android:textColor="#388E3C"
+            android:textColorHighlight="#E64A19"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="249dp"
+            android:layout_marginStart="2dp"
+            tools:visibility="invisible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/A1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/A_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/B1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="B:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/B_p"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/C1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="C:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/C_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/D1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="D:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/D_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/E1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="E:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/E_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="12"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/F1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="F:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/F_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/G1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="G:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/G_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/H1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="H:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/H_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/I1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="I:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/I_p"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="9"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/J1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="J:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/J_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/K1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="K:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/K_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/L1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="L:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/L_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/M1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="M:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/M_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/N1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="N:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/N_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/O1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="O:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/O_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="8"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/P1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="P:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/P_p"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/Q1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Q:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Q_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/blank_11"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/blank_21"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/R1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="R:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/R_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/S1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="S:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/S_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/T1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="T:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+
+                <EditText
+                    android:id="@+id/T_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="6"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/U1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="U:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/U_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/V1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="V:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/V_p"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/W1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="W:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/W_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/blank_31"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/blank_41"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/X1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="X:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/X_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/Y1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Y:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Y_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="2"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+                <TextView
+                    android:id="@+id/Z1"
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Z:"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/Z_p"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0C689F38">
+
+                <TextView
+                    android:id="@+id/blank1"
+                    android:layout_width="28dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="/"
+                    android:textColor="#FD050505"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/blank_p"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textColor="#FD050505"
+                    android:textSize="21sp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/max_game_cycles_layout"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="243dp"
+        android:background="#36F3F3DE"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/check_max_game_cycles"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:text="@string/maximum_game_turns"
+            android:textColor="#E4689F38"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/max_turns"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:hint="Max game turns should be between 1 and 50"
+            android:inputType="number"
+            android:text="10"
+            android:textColor="#FD050505"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+     </LinearLayout>
+
+
+
+</RelativeLayout>

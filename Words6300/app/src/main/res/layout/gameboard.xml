@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameBoard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="#F4F8F8"
+            android:text="Game Board"
+            android:textAlignment="center"
+            android:textColor="#0A0000"
+            android:textIsSelectable="false"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9A825"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Turn #:"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/turn"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Max Turns:"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/max_game_cycles"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6EB5E4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Board"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/board_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+
+                <Button
+                    android:id="@+id/board_2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/board_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/board_4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6EB5E4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rack"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/swap_rack_button"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:background="#4CAF50"
+                    android:text="Swap"
+                    android:textAllCaps="false"
+                    android:textColor="#FBFBFB"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/rack_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/rack_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+                <Button
+                    android:id="@+id/rack_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/rack_4"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/rack_5"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/rack_6"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/rack_7"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Word:"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/word"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text=""
+                    android:textSize="24dp" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="#E1D32F2F"
+                    android:ems="10"
+                    android:text="Clear"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#FBFBFB"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turn Score:"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:ems="10"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Game Score:"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/gamescore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text=""
+                    android:textSize="24dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#4CAF50"
+                    android:ems="10"
+                    android:text="Play"
+
+                    android:textAllCaps="false"
+                    android:textColor="#FBFBFB"
+                    android:textSize="22dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/error"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:text=""
+                    android:textSize="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/return_menu_button"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="218dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="9dp"
+        android:background="#E1D32F2F"
+        android:text="Return Home"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#4CAF50"
+        android:textColorLink="#4CAF50"
+        android:textIsSelectable="true"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/next_turn"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="9dp"
+        android:background="#4CAF50"
+        android:text="Next Turn"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+
+        android:textSize="24sp" />
+
+</RelativeLayout>

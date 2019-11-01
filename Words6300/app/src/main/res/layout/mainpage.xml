@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:background="#F4F8F8"
+        android:text="Main Menu"
+        android:textColor="#0A0000"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/game_settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="439dp"
+        android:background="#689F38"
+        android:text="Game Settings"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#4CAF50"
+        android:textColorLink="#4CAF50"
+        android:textIsSelectable="true"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/resume_game_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="330dp"
+        android:background="#D3C2185B"
+        android:text="Resume Previous Game"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textIsSelectable="true"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/start_game_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="225dp"
+        android:background="#AD0288D1"
+        android:text="Start New Game"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/view_statistics_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="111dp"
+        android:background="#AFB42B"
+        android:text="View Statistics"
+        android:textColor="#FBFBFB"
+        android:textColorHighlight="#009688"
+        android:textIsSelectable="true"
+        android:textSize="24sp" />
+</RelativeLayout>
